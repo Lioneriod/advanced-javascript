@@ -44,7 +44,57 @@ table {
 }
 
 /* Me stuff */
-.header{
+body{
+  color: #fff;
+  background-color: #191821;
   font-family: 'Jacquard 12', Courier, monospace;
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.typewriterArea{
+  display: flex;
+  width: max-content;
+}
+
+.title{
   font-size: 3em;
+  overflow: hidden;
+  border-right: .15em solid #00ffd0; /* The blinking cursor */
+  white-space: nowrap;
+  letter-spacing: .15em; /* For dramatic effect */
+  animation: typing 3.6s steps(35, end), blink-caret .5s step-end infinite;
+}
+
+.greeting{
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 3.6s;
+  font-size: 2em;
+}
+
+/* Keyframes for the animation */
+
+/* Title animation: 
+The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #00ffd0 }
+}
+
+/*Greeting animation: 
+Fade in effect */
+@keyframes fadeIn {
+  from{opacity: 0;}
+  to{opacity: 1;}
 }
