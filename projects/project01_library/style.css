@@ -44,11 +44,26 @@ table {
 }
 
 /* Me stuff */
-body{
-  color: #fff;
-  background-color: #191821;
-  font-family: 'Jacquard 12', Courier, monospace;
+:root{
+  --primary-color: #f5f5f5;
+  --background-color:#191821;
+  --impact-color: #ff0051;
+  --primary-font: 'Jacquard 12', Courier, monospace;
+  --secondary-font: 'New Rocker', Courier, monospace;
 }
+
+body{
+  color: var(--primary-color);
+  background-image: url("./assets/bg.jpg");
+  background-color: var(--background-color);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: var(--primary-font);
+  margin: 20px;
+}
+
 
 .header{
   display: flex;
@@ -56,43 +71,67 @@ body{
   gap: 10px;
 }
 
-.typewriterArea{
-  display: flex;
-  width: max-content;
-}
-
 .title{
-  font-size: 3em;
-  overflow: hidden;
-  border-right: .15em solid #00ffd0; /* The blinking cursor */
-  white-space: nowrap;
-  letter-spacing: .15em; /* For dramatic effect */
-  animation: typing 3s steps(35, end), blink-caret .5s step-end infinite;
+  letter-spacing: .15em;
+  opacity: 1;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.5s;
+  font-size: 2.5em;
 }
 
 .greeting{
-  opacity: 0;
+  opacity: 1;
   animation: fadeIn 1s ease forwards;
-  animation-delay: 3.6s;
+  animation-delay: 2.2s;
   font-size: 2em;
 }
 
-/* Keyframes for the animation */
-
-/* Title animation: 
-The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+.dramaText{
+  color: var(--impact-color);
 }
 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #00ffd0 }
+/* Library */
+.library {
+  opacity: 1;
+  position: relative;
+  display: grid;
+  grid-template-rows: 5fr 1fr;
+  grid-template-columns: 5fr 1fr;
+  grid-template-areas: 
+  "main main"
+  "main register";
+  padding: 10px;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 3.2s;
 }
 
-/*Greeting animation: 
+.library::before {
+  opacity: 1;
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  
+  border: 10px solid transparent;
+  border-image-source: url('./assets/gothPattern.jpg');
+  border-image-slice: 30;
+  border-image-repeat: repeat;
+
+
+  pointer-events: none;
+}
+
+.registerButton{
+  font-family: var(--secondary-font);
+  font-size: 1.3em;
+  opacity: 1;
+  background-color: var(--impact-color);
+  padding: 6px 20px;
+  font-size: 1.6em;
+  flex-grow: 1;
+}
+
+
+/* Keyframes for the animation
 Fade in effect */
 @keyframes fadeIn {
   from{opacity: 0;}

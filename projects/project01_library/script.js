@@ -11,6 +11,10 @@ function Book(title, author, pages, read) {
   this.read = read;
 }
 
-Book.prototype.sayInfo = function () {};
+Book.prototype.registerInfo = function () {
+      let book = document.createElement("div");
+      
+};
 
 // Website interactivity
+const libraryArea = document.querySelector(".library");

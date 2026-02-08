@@ -6,19 +6,30 @@
     <title>Library Project</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Jacquard+12&family=New+Rocker&display=swap");
     </style>
   </head>
   <body>
-    <div class="header">
-      <div class="typewriterArea">
-        <div class="title">Welcome to the forbidden library...</div>
+    <main>
+      <div class="header">
+        <div class="title">
+          Enter, if thou darest, into the
+          <span class="dramaText">Forbidden Library...</span>
+        </div>
+        <div class="greeting">
+          Hark! I beseech thee,
+          <span class="dramaText">transcribe thy tome</span> into our dark
+          ledger hereunto:
+        </div>
       </div>
-      <div class="greeting">
-        Please, register thy book into our catalogue below:
+      <div class="options"></div>
+      <div class="library">
+        <div class="mainArea" style="grid-area: main"></div>
+        <button class="registerButton" style="grid-area: register">
+          Register
+        </button>
       </div>
-    </div>
-    <div class=""></div>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
