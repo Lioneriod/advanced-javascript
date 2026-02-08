@@ -25,11 +25,26 @@
       <div class="options"></div>
       <div class="library">
         <div class="mainArea" style="grid-area: main"></div>
-        <button class="registerButton" style="grid-area: register">
+        <button id="registerButton" style="grid-area: register">
           Register
         </button>
       </div>
     </main>
+    <div class="popupOverlay" id="popupOverlay">
+      <div id="popupContent">
+        <span id="closeButton" style="grid-area: closeButton">&times;</span>
+        <div id="titleForm" style="grid-area: titleForm">
+          Transcribe thy <span class="dramaText">book</span>:
+        </div>
+        <form id="registerForm" style="grid-area: registerForm">
+          <input text="title" placeholder="Title" required />
+          <input text="author" placeholder="Author" required />
+          <input text="pages" placeholder="Total of pages" required />
+          <input text="year" placeholder="Year of publication" required />
+          <button id="confirmButton" type="submit">Confirm</button>
+        </form>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
