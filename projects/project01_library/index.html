@@ -30,6 +30,7 @@
             <div class="cardAuthor"></div>
             <div class="cardPages"></div>
             <div class="cardYear"></div>
+            <div class="read"></div>
           </div>
         </div>
         <button id="registerButton">Register</button>
@@ -42,10 +43,20 @@
           Transcribe thy <span class="dramaText">book</span>:
         </div>
         <form id="registerForm">
-          <input text="title" placeholder="Title" required />
-          <input text="author" placeholder="Author" required />
-          <input text="pages" placeholder="Total of pages" required />
-          <input text="year" placeholder="Year of publication" required />
+          <input text="title" id="title" placeholder="Title" required />
+          <input text="author" id="author" placeholder="Author" required />
+          <input
+            text="pages"
+            id="pages"
+            placeholder="Total of pages"
+            required
+          />
+          <input
+            text="year"
+            id="year"
+            placeholder="Year of publication"
+            required
+          />
           <button id="confirmButton" type="submit">Confirm</button>
         </form>
       </div>
