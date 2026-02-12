@@ -23,12 +23,28 @@ registerButton.addEventListener("click", () => {
 });
 
 closeButton.addEventListener("click", () => {
-  popup.style.display = "none";
+  popup.style.animation = "fadeOutMove 0.3s ease";
+  popup.addEventListener(
+    "animationend",
+    () => {
+      popup.style.display = "none";
+      popup.style.animation = "";
+    },
+    { once: true },
+  );
 });
 
 window.onclick = (event) => {
   if (event.target === popup) {
-    popup.style.display = "none";
+    popup.style.animation = "fadeOutMove 0.3s ease";
+    popup.addEventListener(
+      "animationend",
+      () => {
+        popup.style.display = "none";
+        popup.style.animation = "";
+      },
+      { once: true },
+    );
   }
 };
 

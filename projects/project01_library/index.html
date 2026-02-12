@@ -24,19 +24,24 @@
       </div>
       <div class="options"></div>
       <div class="library">
-        <div class="mainArea" style="grid-area: main"></div>
-        <button id="registerButton" style="grid-area: register">
-          Register
-        </button>
+        <div class="mainArea">
+          <div class="card">
+            <div class="cardTitle"></div>
+            <div class="cardAuthor"></div>
+            <div class="cardPages"></div>
+            <div class="cardYear"></div>
+          </div>
+        </div>
+        <button id="registerButton">Register</button>
       </div>
     </main>
     <div class="popupOverlay" id="popupOverlay">
       <div id="popupContent">
-        <span id="closeButton" style="grid-area: closeButton">&times;</span>
-        <div id="titleForm" style="grid-area: titleForm">
+        <span id="closeButton">&times;</span>
+        <div id="titleForm">
           Transcribe thy <span class="dramaText">book</span>:
         </div>
-        <form id="registerForm" style="grid-area: registerForm">
+        <form id="registerForm">
           <input text="title" placeholder="Title" required />
           <input text="author" placeholder="Author" required />
           <input text="pages" placeholder="Total of pages" required />
